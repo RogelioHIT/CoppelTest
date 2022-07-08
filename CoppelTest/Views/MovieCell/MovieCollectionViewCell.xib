@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gTV-IL-0wX" customClass="MovieCollectionViewCell" customModule="CoppelTest" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="MovieCollectionViewCell" id="gTV-IL-0wX" customClass="MovieCollectionViewCell" customModule="CoppelTest" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="233" height="368"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -30,23 +30,23 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FSP-9q-0Go">
                                         <rect key="frame" x="4" y="4" width="209" height="121"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name very very very long mano super very long" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rK-dL-nj1">
-                                                <rect key="frame" x="0.0" y="0.0" width="209" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luca" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rK-dL-nj1">
+                                                <rect key="frame" x="0.0" y="0.0" width="209" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" name="green"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0nF-Qb-fBv" userLabel="secondLine stackview">
-                                                <rect key="frame" x="0.0" y="32" width="209" height="23.5"/>
+                                                <rect key="frame" x="0.0" y="31.5" width="209" height="24"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name very very very long mano super very long" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkt-vm-Iig">
-                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="23.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="June 17, 2021" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkt-vm-Iig">
+                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <color key="textColor" name="green"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWA-dN-8h8">
-                                                        <rect key="frame" x="159" y="0.0" width="50" height="23.5"/>
+                                                        <rect key="frame" x="159" y="0.0" width="50" height="24"/>
                                                         <color key="tintColor" name="green"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="5.2" imagePadding="2">
@@ -102,6 +102,13 @@
                 <constraint firstItem="O9w-Th-QqI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xSZ-xV-w2P"/>
             </constraints>
             <size key="customSize" width="233" height="368"/>
+            <connections>
+                <outlet property="dateLabel" destination="Wkt-vm-Iig" id="8n7-1z-gDF"/>
+                <outlet property="descriptionLabel" destination="u6o-AP-Pyw" id="CWH-Sb-geP"/>
+                <outlet property="nameLabel" destination="9rK-dL-nj1" id="U04-wI-Rf6"/>
+                <outlet property="posterImage" destination="LXn-r1-4vO" id="T2Y-qY-6YO"/>
+                <outlet property="scoreLabel" destination="mWA-dN-8h8" id="4Oz-GT-UOT"/>
+            </connections>
             <point key="canvasLocation" x="25.362318840579711" y="121.875"/>
         </collectionViewCell>
     </objects>

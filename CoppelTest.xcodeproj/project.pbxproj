@@ -25,6 +25,9 @@
 		E94218462877C16F00603650 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218452877C16F00603650 /* AppColors.swift */; };
 		E942184A2877C99A00603650 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218492877C99A00603650 /* LoginViewModel.swift */; };
 		E942184C2877CA0E00603650 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942184B2877CA0E00603650 /* User.swift */; };
+		E99D812028788D5500BCF4C0 /* CoppelCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D811F28788D5500BCF4C0 /* CoppelCollectionView.swift */; };
+		E99D8122287894F100BCF4C0 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D8121287894F100BCF4C0 /* MovieViewModel.swift */; };
+		E99D8124287894F800BCF4C0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D8123287894F800BCF4C0 /* Movie.swift */; };
 		E9D5DDD32877DAC60084F1C7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD22877DAC60084F1C7 /* MainViewController.swift */; };
 		E9D5DDD52877E33F0084F1C7 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD42877E33F0084F1C7 /* NavigationViewController.swift */; };
 		E9D5DDDB2877F6AB0084F1C7 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD92877F6AB0084F1C7 /* MovieCollectionViewCell.swift */; };
@@ -53,6 +56,9 @@
 		E94218452877C16F00603650 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		E94218492877C99A00603650 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E942184B2877CA0E00603650 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E99D811F28788D5500BCF4C0 /* CoppelCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoppelCollectionView.swift; sourceTree = "<group>"; };
+		E99D8121287894F100BCF4C0 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		E99D8123287894F800BCF4C0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E9D5DDD22877DAC60084F1C7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E9D5DDD42877E33F0084F1C7 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		E9D5DDD92877F6AB0084F1C7 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				E942184B2877CA0E00603650 /* User.swift */,
+				E99D8123287894F800BCF4C0 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				E94218492877C99A00603650 /* LoginViewModel.swift */,
+				E99D8121287894F100BCF4C0 /* MovieViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -173,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				E9305BD62877552E00BCE742 /* CoppelTextField.swift */,
+				E99D811F28788D5500BCF4C0 /* CoppelCollectionView.swift */,
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
@@ -362,9 +371,11 @@
 				E94218462877C16F00603650 /* AppColors.swift in Sources */,
 				E942183E2877946500603650 /* AppError.swift in Sources */,
 				E94218422877B4C800603650 /* RequestSessionResponse.swift in Sources */,
+				E99D812028788D5500BCF4C0 /* CoppelCollectionView.swift in Sources */,
 				E942184A2877C99A00603650 /* LoginViewModel.swift in Sources */,
 				E9D5DDD32877DAC60084F1C7 /* MainViewController.swift in Sources */,
 				E9305BD428774B5100BCE742 /* LoginViewController.swift in Sources */,
+				E99D8122287894F100BCF4C0 /* MovieViewModel.swift in Sources */,
 				E942184C2877CA0E00603650 /* User.swift in Sources */,
 				E942183928778B1B00603650 /* Endpoints.swift in Sources */,
 				E9305BB92877475900BCE742 /* AppDelegate.swift in Sources */,
@@ -373,6 +384,7 @@
 				E9D5DDDB2877F6AB0084F1C7 /* MovieCollectionViewCell.swift in Sources */,
 				E94218442877C11400603650 /* View+Extensions.swift in Sources */,
 				E9305BDD28777D7C00BCE742 /* Service.swift in Sources */,
+				E99D8124287894F800BCF4C0 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

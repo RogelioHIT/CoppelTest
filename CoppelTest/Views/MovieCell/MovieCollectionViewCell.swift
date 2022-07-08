@@ -8,10 +8,19 @@
 import UIKit
 
 class MovieCollectionViewCell: UICollectionViewCell {
-
+    
+    @IBOutlet weak var posterImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UIButton!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    func config(with movie: MovieViewModel) {
+        nameLabel.text = movie.movieName
     }
 
 }
