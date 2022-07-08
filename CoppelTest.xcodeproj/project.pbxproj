@@ -9,21 +9,39 @@
 /* Begin PBXBuildFile section */
 		E9305BB92877475900BCE742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9305BB82877475900BCE742 /* AppDelegate.swift */; };
 		E9305BBB2877475900BCE742 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9305BBA2877475900BCE742 /* SceneDelegate.swift */; };
-		E9305BBD2877475900BCE742 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9305BBC2877475900BCE742 /* ViewController.swift */; };
-		E9305BC02877475900BCE742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9305BBE2877475900BCE742 /* Main.storyboard */; };
 		E9305BC22877475B00BCE742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9305BC12877475B00BCE742 /* Assets.xcassets */; };
 		E9305BC52877475B00BCE742 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9305BC32877475B00BCE742 /* LaunchScreen.storyboard */; };
+		E9305BD428774B5100BCE742 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9305BD328774B5100BCE742 /* LoginViewController.swift */; };
+		E9305BD72877552E00BCE742 /* CoppelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9305BD62877552E00BCE742 /* CoppelTextField.swift */; };
+		E9305BDA28777A4300BCE742 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9305BD928777A4300BCE742 /* String+Extensions.swift */; };
+		E9305BDD28777D7C00BCE742 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9305BDC28777D7C00BCE742 /* Service.swift */; };
+		E942183928778B1B00603650 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183828778B1B00603650 /* Endpoints.swift */; };
+		E942183C287793E700603650 /* RequestTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183B287793E700603650 /* RequestTokenResponse.swift */; };
+		E942183E2877946500603650 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183D2877946500603650 /* AppError.swift */; };
+		E94218402877A9C000603650 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183F2877A9C000603650 /* WebViewController.swift */; };
+		E94218422877B4C800603650 /* RequestSessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218412877B4C800603650 /* RequestSessionResponse.swift */; };
+		E94218442877C11400603650 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218432877C11400603650 /* View+Extensions.swift */; };
+		E94218462877C16F00603650 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218452877C16F00603650 /* AppColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E9305BB52877475900BCE742 /* CoppelTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoppelTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9305BB82877475900BCE742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9305BBA2877475900BCE742 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E9305BBC2877475900BCE742 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E9305BBF2877475900BCE742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9305BC12877475B00BCE742 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9305BC42877475B00BCE742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9305BC62877475B00BCE742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9305BD328774B5100BCE742 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E9305BD62877552E00BCE742 /* CoppelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoppelTextField.swift; sourceTree = "<group>"; };
+		E9305BD928777A4300BCE742 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		E9305BDC28777D7C00BCE742 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		E942183828778B1B00603650 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		E942183B287793E700603650 /* RequestTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTokenResponse.swift; sourceTree = "<group>"; };
+		E942183D2877946500603650 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		E942183F2877A9C000603650 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		E94218412877B4C800603650 /* RequestSessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSessionResponse.swift; sourceTree = "<group>"; };
+		E94218432877C11400603650 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		E94218452877C16F00603650 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,104 @@
 		E9305BB72877475900BCE742 /* CoppelTest */ = {
 			isa = PBXGroup;
 			children = (
-				E9305BB82877475900BCE742 /* AppDelegate.swift */,
-				E9305BBA2877475900BCE742 /* SceneDelegate.swift */,
-				E9305BBC2877475900BCE742 /* ViewController.swift */,
-				E9305BBE2877475900BCE742 /* Main.storyboard */,
-				E9305BC12877475B00BCE742 /* Assets.xcassets */,
+				E9305BDB28777D6B00BCE742 /* Service */,
+				E9305BD828777A3300BCE742 /* Extensions */,
+				E9305BD52877551C00BCE742 /* CustomElements */,
+				E9305BD028774B1F00BCE742 /* Assets */,
+				E9305BCF28774B0700BCE742 /* Delegate */,
+				E9305BCE28774AFD00BCE742 /* ViewModels */,
+				E9305BCD28774AF700BCE742 /* Models */,
+				E9305BCC28774AEF00BCE742 /* Views */,
 				E9305BC32877475B00BCE742 /* LaunchScreen.storyboard */,
 				E9305BC62877475B00BCE742 /* Info.plist */,
 			);
 			path = CoppelTest;
+			sourceTree = "<group>";
+		};
+		E9305BCC28774AEF00BCE742 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9305BD228774B3A00BCE742 /* Login */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E9305BCD28774AF700BCE742 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E9305BCE28774AFD00BCE742 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E9305BCF28774B0700BCE742 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				E9305BB82877475900BCE742 /* AppDelegate.swift */,
+				E9305BBA2877475900BCE742 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		E9305BD028774B1F00BCE742 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E94218452877C16F00603650 /* AppColors.swift */,
+				E9305BC12877475B00BCE742 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E9305BD228774B3A00BCE742 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E9305BD328774B5100BCE742 /* LoginViewController.swift */,
+				E942183F2877A9C000603650 /* WebViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E9305BD52877551C00BCE742 /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				E9305BD62877552E00BCE742 /* CoppelTextField.swift */,
+			);
+			path = CustomElements;
+			sourceTree = "<group>";
+		};
+		E9305BD828777A3300BCE742 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9305BD928777A4300BCE742 /* String+Extensions.swift */,
+				E94218432877C11400603650 /* View+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E9305BDB28777D6B00BCE742 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E942183A287793CC00603650 /* Model */,
+				E9305BDC28777D7C00BCE742 /* Service.swift */,
+				E942183828778B1B00603650 /* Endpoints.swift */,
+				E942183D2877946500603650 /* AppError.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		E942183A287793CC00603650 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E94218412877B4C800603650 /* RequestSessionResponse.swift */,
+				E942183B287793E700603650 /* RequestTokenResponse.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +234,6 @@
 			files = (
 				E9305BC52877475B00BCE742 /* LaunchScreen.storyboard in Resources */,
 				E9305BC22877475B00BCE742 /* Assets.xcassets in Resources */,
-				E9305BC02877475900BCE742 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +244,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9305BBD2877475900BCE742 /* ViewController.swift in Sources */,
+				E9305BDA28777A4300BCE742 /* String+Extensions.swift in Sources */,
+				E94218402877A9C000603650 /* WebViewController.swift in Sources */,
+				E9305BD72877552E00BCE742 /* CoppelTextField.swift in Sources */,
+				E94218462877C16F00603650 /* AppColors.swift in Sources */,
+				E942183E2877946500603650 /* AppError.swift in Sources */,
+				E94218422877B4C800603650 /* RequestSessionResponse.swift in Sources */,
+				E9305BD428774B5100BCE742 /* LoginViewController.swift in Sources */,
+				E942183928778B1B00603650 /* Endpoints.swift in Sources */,
 				E9305BB92877475900BCE742 /* AppDelegate.swift in Sources */,
 				E9305BBB2877475900BCE742 /* SceneDelegate.swift in Sources */,
+				E942183C287793E700603650 /* RequestTokenResponse.swift in Sources */,
+				E94218442877C11400603650 /* View+Extensions.swift in Sources */,
+				E9305BDD28777D7C00BCE742 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E9305BBE2877475900BCE742 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E9305BBF2877475900BCE742 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E9305BC32877475B00BCE742 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +400,6 @@
 				INFOPLIST_FILE = CoppelTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +427,6 @@
 				INFOPLIST_FILE = CoppelTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
