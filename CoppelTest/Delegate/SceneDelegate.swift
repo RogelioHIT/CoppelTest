@@ -20,7 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = LoginViewController()
+        if let session_id = UserDefaults.standard.value(forKey: "session_id") {
+            window?.rootViewController = NavigationViewController()
+        }else {
+            window?.rootViewController = LoginViewController()
+        }
         window?.makeKeyAndVisible()
     }
     

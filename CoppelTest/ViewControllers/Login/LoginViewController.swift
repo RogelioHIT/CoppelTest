@@ -203,6 +203,7 @@ extension LoginViewController: AuthWebViewDelegate {
                                 
                 print("Login waws a success!")
                 print("Your session id is \(sessionId)")
+                UserDefaults.standard.set(sessionId, forKey: "session_id")
             }
         }else {
             self.showErrorMessage(.loginDenied)

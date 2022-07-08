@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gTV-IL-0wX" customClass="MovieCollectionViewCell" customModule="CoppelTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="233" height="368"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="233" height="368"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9w-Th-QqI" userLabel="backgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="233" height="368"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LXn-r1-4vO" userLabel="MoviePoster">
+                                <rect key="frame" x="0.0" y="0.0" width="233" height="231"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Xl-He-QRM" userLabel="InfoContainer">
+                                <rect key="frame" x="8" y="231" width="217" height="129"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FSP-9q-0Go">
+                                        <rect key="frame" x="4" y="4" width="209" height="121"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name very very very long mano super very long" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rK-dL-nj1">
+                                                <rect key="frame" x="0.0" y="0.0" width="209" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <color key="textColor" name="green"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0nF-Qb-fBv" userLabel="secondLine stackview">
+                                                <rect key="frame" x="0.0" y="32" width="209" height="23.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name very very very long mano super very long" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkt-vm-Iig">
+                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="23.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <color key="textColor" name="green"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWA-dN-8h8">
+                                                        <rect key="frame" x="159" y="0.0" width="50" height="23.5"/>
+                                                        <color key="tintColor" name="green"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="5.2" imagePadding="2">
+                                                            <imageReference key="image" image="star.fill" catalog="system" symbolScale="default" renderingMode="template"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="7"/>
+                                                            <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="8"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="mWA-dN-8h8" firstAttribute="width" secondItem="0nF-Qb-fBv" secondAttribute="width" multiplier="0.24" id="9Gv-R1-APn"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6o-AP-Pyw">
+                                                <rect key="frame" x="0.0" y="63.5" width="209" height="57.5"/>
+                                                <string key="text">Movie name very very very long mano super very long Movie name very very very long mano super very long Movie name very very very long mano super very longMovie name very very very long mano super very long Movie name very very very long mano super very long Movie name very very very long mano super very long</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" name="green"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="u6o-AP-Pyw" firstAttribute="top" secondItem="0nF-Qb-fBv" secondAttribute="bottom" constant="8" id="U4t-fl-NHS"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="FSP-9q-0Go" secondAttribute="bottom" constant="4" id="Ezz-Rj-4pn"/>
+                                    <constraint firstItem="FSP-9q-0Go" firstAttribute="leading" secondItem="5Xl-He-QRM" secondAttribute="leading" constant="4" id="MLa-Kg-5ns"/>
+                                    <constraint firstAttribute="trailing" secondItem="FSP-9q-0Go" secondAttribute="trailing" constant="4" id="d0Z-Ue-zgr"/>
+                                    <constraint firstItem="FSP-9q-0Go" firstAttribute="top" secondItem="5Xl-He-QRM" secondAttribute="top" constant="4" id="nBP-q1-V3A"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="darkGreen"/>
+                        <constraints>
+                            <constraint firstItem="5Xl-He-QRM" firstAttribute="height" secondItem="O9w-Th-QqI" secondAttribute="height" multiplier="0.35" id="I1e-Q9-69t"/>
+                            <constraint firstAttribute="trailing" secondItem="5Xl-He-QRM" secondAttribute="trailing" constant="8" id="L55-ht-W0s"/>
+                            <constraint firstItem="5Xl-He-QRM" firstAttribute="top" secondItem="LXn-r1-4vO" secondAttribute="bottom" id="LVA-b1-aum"/>
+                            <constraint firstItem="LXn-r1-4vO" firstAttribute="leading" secondItem="O9w-Th-QqI" secondAttribute="leading" id="T1h-q6-Oih"/>
+                            <constraint firstItem="5Xl-He-QRM" firstAttribute="leading" secondItem="O9w-Th-QqI" secondAttribute="leading" constant="8" id="YNs-QS-DLU"/>
+                            <constraint firstAttribute="trailing" secondItem="LXn-r1-4vO" secondAttribute="trailing" id="iGN-UM-TcI"/>
+                            <constraint firstItem="LXn-r1-4vO" firstAttribute="top" secondItem="O9w-Th-QqI" secondAttribute="top" id="rGa-xK-l6g"/>
+                            <constraint firstAttribute="bottom" secondItem="5Xl-He-QRM" secondAttribute="bottom" constant="8" id="u6E-ir-ra3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="O9w-Th-QqI" secondAttribute="bottom" id="Ncj-2s-J5h"/>
+                <constraint firstAttribute="trailing" secondItem="O9w-Th-QqI" secondAttribute="trailing" id="lU3-ks-90L"/>
+                <constraint firstItem="O9w-Th-QqI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ssS-aG-qTe"/>
+                <constraint firstItem="O9w-Th-QqI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xSZ-xV-w2P"/>
+            </constraints>
+            <size key="customSize" width="233" height="368"/>
+            <point key="canvasLocation" x="25.362318840579711" y="121.875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="darkGreen">
+            <color red="0.094117647058823528" green="0.14901960784313725" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="green">
+            <color red="0.31764705882352939" green="0.66666666666666663" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
