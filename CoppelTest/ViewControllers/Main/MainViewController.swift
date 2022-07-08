@@ -39,6 +39,11 @@ class MainViewController: UIViewController {
         return button
     }()
     
+    let collectionView: CoppelCollectionView = {
+        let cv = CoppelCollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
+        return cv
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -63,6 +68,8 @@ class MainViewController: UIViewController {
         navBar.addSubview(navigationTitle)
         fullNavBar.addSubview(navBar)
         view.addSubview(fullNavBar)
+        
+        view.addSubview(collectionView)
     }
     
     private func configLayout() {
@@ -89,6 +96,12 @@ class MainViewController: UIViewController {
         navigationTitle.leadingAnchor.constraint(equalTo: navBar.leadingAnchor, constant: 16).isActive = true
         navigationTitle.trailingAnchor.constraint(equalTo: navBar.trailingAnchor, constant: 16).isActive = true
         navigationTitle.centerYAnchor.constraint(equalTo: navBar.centerYAnchor).isActive = true
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16.0).isActive = true
+        view.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor,  constant: 16.0).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo:  view.bottomAnchor,  constant: 0.0).isActive = true
+        collectionView.topAnchor.constraint(equalTo:  fullNavBar.bottomAnchor,  constant: 32.0).isActive = true
     }
     
     private func addActions() {
