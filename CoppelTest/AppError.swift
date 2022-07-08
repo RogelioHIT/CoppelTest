@@ -8,9 +8,9 @@
 import Foundation
 
 enum AppError: Error {
-    case wrongURL
+    case loginDenied
+    case badIncompleteData
     case badRequest
     case decodingError
     case noData
-    case badHTTPBodySerialization
 }

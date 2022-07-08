@@ -17,7 +17,7 @@ class Service {
     
     func requestToken(username: String, password: String, completion: @escaping  (RequestTokenResponse?, AppError?) -> Void) {
         guard let endpointURL = URL(string: Endpoint.requestToken.urlString) else {
-            completion(nil, .wrongURL)
+            completion(nil, .badRequest)
             return }
         serviceSession.dataTask(with: endpointURL){ data, resp, error in
             if error != nil {
@@ -41,7 +41,7 @@ class Service {
     
     func getSessionId(token: String, completion: @escaping  (RequestSessionResponse?, AppError?) -> Void) {
         guard let endpointURL = URL(string: Endpoint.sessionId.urlString) else {
-            completion(nil, .wrongURL)
+            completion(nil, .badRequest)
             return }
         
         var request = URLRequest(url: endpointURL)

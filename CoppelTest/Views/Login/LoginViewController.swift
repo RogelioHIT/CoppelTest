@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ActivityIndicatorManager
 
 class LoginViewController: UIViewController {
     
@@ -127,19 +128,27 @@ class LoginViewController: UIViewController {
 // MARK: actions
 extension LoginViewController {
     @objc private func login() {
+        errorMessage.isHidden = true
         loginViewModel = LoginViewModel(userName: userNameField.text, userPassword: userPasswordField.text)
         if loginViewModel.isInformationValid() {
+            AIMActivityIndicatorManager.sharedInstance.shouldShowIndicator()
             loginViewModel.requestToken { token, error in
+                AIMActivityIndicatorManager.sharedInstance.shouldHideIndicator()
                 if let error = error {
                     self.showErrorMessage(error)
                     return
                 }
+                
                 guard let token = token else {
                     self.showErrorMessage(.noData)
                     return
                 }
+                
                 self.forwardUserToValidateTheToken(token)
+    
             }
+        }else {
+            self.showErrorMessage(.badIncompleteData)
         }
     }
 }
@@ -162,7 +171,14 @@ extension LoginViewController {
     }
     
     private func showErrorMessage(_ error: AppError) {
-        errorMessage.text = "invalid username and/or password. You did not provide a valid login."
+        switch error {
+        case .badIncompleteData:
+            errorMessage.text = "Invalid username and/or password."
+        case .loginDenied:
+            errorMessage.text = "Login denied."
+        case .badRequest, .decodingError, .noData:
+            errorMessage.text = "There was an error, try again."
+        }
         errorMessage.isHidden = false
     }
 }
@@ -173,7 +189,9 @@ extension LoginViewController: AuthWebViewDelegate {
         self.dismiss(animated: true)
         
         if allowed {
+            AIMActivityIndicatorManager.sharedInstance.shouldShowIndicator()
             self.loginViewModel.requestSessionId(token: token) { sessionId, error in
+                AIMActivityIndicatorManager.sharedInstance.shouldHideIndicator()
                 if let error = error {
                     self.showErrorMessage(error)
                     return
@@ -182,10 +200,13 @@ extension LoginViewController: AuthWebViewDelegate {
                     self.showErrorMessage(.noData)
                     return
                 }
-                
+                                
                 print("Login waws a success!")
                 print("Your session id is \(sessionId)")
             }
+        }else {
+            self.showErrorMessage(.loginDenied)
+            AIMActivityIndicatorManager.sharedInstance.shouldHideIndicator()
         }
     }
 }

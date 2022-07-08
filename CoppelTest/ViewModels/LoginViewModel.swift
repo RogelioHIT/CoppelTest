@@ -48,10 +48,14 @@ extension LoginViewModel {
     func requestSessionId(token: String, completion: @escaping (String?, AppError?) -> Void) {
         Service.shared.getSessionId(token: token) { response, error in
             guard let resp = response, error == nil else {
-                completion(nil, error)
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
                 return
             }
-            completion(resp.session_id, nil)
+            DispatchQueue.main.async {
+                completion(resp.session_id, nil)
+            }
         }
     }
 }

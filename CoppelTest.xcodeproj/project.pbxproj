@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A5A2E7439F725A8790AC029 /* Pods_CoppelTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089E249D43032406491FE249 /* Pods_CoppelTest.framework */; };
 		E9305BB92877475900BCE742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9305BB82877475900BCE742 /* AppDelegate.swift */; };
 		E9305BBB2877475900BCE742 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9305BBA2877475900BCE742 /* SceneDelegate.swift */; };
 		E9305BC22877475B00BCE742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9305BC12877475B00BCE742 /* Assets.xcassets */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		089E249D43032406491FE249 /* Pods_CoppelTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoppelTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D2C9AC7606B71342634712D /* Pods-CoppelTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoppelTest.debug.xcconfig"; path = "Target Support Files/Pods-CoppelTest/Pods-CoppelTest.debug.xcconfig"; sourceTree = "<group>"; };
 		E9305BB52877475900BCE742 /* CoppelTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoppelTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9305BB82877475900BCE742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9305BBA2877475900BCE742 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		E94218452877C16F00603650 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		E94218492877C99A00603650 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E942184B2877CA0E00603650 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F577E3DE4181AAAF274554A9 /* Pods-CoppelTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoppelTest.release.xcconfig"; path = "Target Support Files/Pods-CoppelTest/Pods-CoppelTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +57,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5A2E7439F725A8790AC029 /* Pods_CoppelTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CDA0CBCD44B32E54282DB487 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089E249D43032406491FE249 /* Pods_CoppelTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E9305BAC2877475900BCE742 = {
 			isa = PBXGroup;
 			children = (
 				E9305BB72877475900BCE742 /* CoppelTest */,
 				E9305BB62877475900BCE742 /* Products */,
+				F16E92902B185C2926EA36E1 /* Pods */,
+				CDA0CBCD44B32E54282DB487 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +195,16 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		F16E92902B185C2926EA36E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D2C9AC7606B71342634712D /* Pods-CoppelTest.debug.xcconfig */,
+				F577E3DE4181AAAF274554A9 /* Pods-CoppelTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9305BC92877475B00BCE742 /* Build configuration list for PBXNativeTarget "CoppelTest" */;
 			buildPhases = (
+				E9BD045342E98AB963228EFE /* [CP] Check Pods Manifest.lock */,
 				E9305BB12877475900BCE742 /* Sources */,
 				E9305BB22877475900BCE742 /* Frameworks */,
 				E9305BB32877475900BCE742 /* Resources */,
+				8DDF1C149F3865A2365CC9AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,6 +271,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8DDF1C149F3865A2365CC9AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoppelTest/Pods-CoppelTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoppelTest/Pods-CoppelTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoppelTest/Pods-CoppelTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9BD045342E98AB963228EFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoppelTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9305BB12877475900BCE742 /* Sources */ = {
@@ -398,6 +467,7 @@
 		};
 		E9305BCA2877475B00BCE742 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D2C9AC7606B71342634712D /* Pods-CoppelTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -425,6 +495,7 @@
 		};
 		E9305BCB2877475B00BCE742 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F577E3DE4181AAAF274554A9 /* Pods-CoppelTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

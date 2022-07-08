@@ -13,7 +13,6 @@ protocol AuthWebViewDelegate {
 }
 
 class AuthWebViewController: UIViewController {
-    
     var webView: WKWebView!
     var webViewAuthDelegate: AuthWebViewDelegate!
     var token: String!
@@ -28,7 +27,6 @@ class AuthWebViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupURL()
     }
     
@@ -51,4 +49,6 @@ extension AuthWebViewController: WKNavigationDelegate {
         }
         
     }
+    
+    
 }
