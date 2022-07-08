@@ -18,10 +18,12 @@
 		E942183928778B1B00603650 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183828778B1B00603650 /* Endpoints.swift */; };
 		E942183C287793E700603650 /* RequestTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183B287793E700603650 /* RequestTokenResponse.swift */; };
 		E942183E2877946500603650 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183D2877946500603650 /* AppError.swift */; };
-		E94218402877A9C000603650 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183F2877A9C000603650 /* WebViewController.swift */; };
+		E94218402877A9C000603650 /* AuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183F2877A9C000603650 /* AuthWebViewController.swift */; };
 		E94218422877B4C800603650 /* RequestSessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218412877B4C800603650 /* RequestSessionResponse.swift */; };
 		E94218442877C11400603650 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218432877C11400603650 /* View+Extensions.swift */; };
 		E94218462877C16F00603650 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218452877C16F00603650 /* AppColors.swift */; };
+		E942184A2877C99A00603650 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218492877C99A00603650 /* LoginViewModel.swift */; };
+		E942184C2877CA0E00603650 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942184B2877CA0E00603650 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,10 +40,12 @@
 		E942183828778B1B00603650 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		E942183B287793E700603650 /* RequestTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTokenResponse.swift; sourceTree = "<group>"; };
 		E942183D2877946500603650 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-		E942183F2877A9C000603650 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		E942183F2877A9C000603650 /* AuthWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebViewController.swift; sourceTree = "<group>"; };
 		E94218412877B4C800603650 /* RequestSessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSessionResponse.swift; sourceTree = "<group>"; };
 		E94218432877C11400603650 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		E94218452877C16F00603650 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		E94218492877C99A00603650 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E942184B2877CA0E00603650 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		E9305BCD28774AF700BCE742 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E942184B2877CA0E00603650 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 		E9305BCE28774AFD00BCE742 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E94218492877C99A00603650 /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -132,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				E9305BD328774B5100BCE742 /* LoginViewController.swift */,
-				E942183F2877A9C000603650 /* WebViewController.swift */,
+				E942183F2877A9C000603650 /* AuthWebViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -245,12 +251,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9305BDA28777A4300BCE742 /* String+Extensions.swift in Sources */,
-				E94218402877A9C000603650 /* WebViewController.swift in Sources */,
+				E94218402877A9C000603650 /* AuthWebViewController.swift in Sources */,
 				E9305BD72877552E00BCE742 /* CoppelTextField.swift in Sources */,
 				E94218462877C16F00603650 /* AppColors.swift in Sources */,
 				E942183E2877946500603650 /* AppError.swift in Sources */,
 				E94218422877B4C800603650 /* RequestSessionResponse.swift in Sources */,
+				E942184A2877C99A00603650 /* LoginViewModel.swift in Sources */,
 				E9305BD428774B5100BCE742 /* LoginViewController.swift in Sources */,
+				E942184C2877CA0E00603650 /* User.swift in Sources */,
 				E942183928778B1B00603650 /* Endpoints.swift in Sources */,
 				E9305BB92877475900BCE742 /* AppDelegate.swift in Sources */,
 				E9305BBB2877475900BCE742 /* SceneDelegate.swift in Sources */,

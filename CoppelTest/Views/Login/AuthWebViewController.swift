@@ -8,14 +8,14 @@
 import UIKit
 import WebKit
 
-protocol WebViewAuthDelegate {
+protocol AuthWebViewDelegate {
     func authDismissWith(token: String, allowed: Bool)
 }
 
-class WebViewController: UIViewController {
+class AuthWebViewController: UIViewController {
     
     var webView: WKWebView!
-    var webViewAuthDelegate: WebViewAuthDelegate!
+    var webViewAuthDelegate: AuthWebViewDelegate!
     var token: String!
     
     override func loadView() {
@@ -39,7 +39,7 @@ class WebViewController: UIViewController {
     }
 }
 
-extension WebViewController: WKNavigationDelegate {
+extension AuthWebViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         guard let url = webView.url else {
             return
