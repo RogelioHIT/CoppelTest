@@ -34,7 +34,6 @@
 		E9B530A32879DE2800311FC0 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B530A22879DE2800311FC0 /* SessionManager.swift */; };
 		E9B530A5287A055300311FC0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B530A4287A055300311FC0 /* Date+Extensions.swift */; };
 		E9D5DDD32877DAC60084F1C7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD22877DAC60084F1C7 /* MainViewController.swift */; };
-		E9D5DDD52877E33F0084F1C7 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD42877E33F0084F1C7 /* NavigationViewController.swift */; };
 		E9D5DDDB2877F6AB0084F1C7 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD92877F6AB0084F1C7 /* MovieCollectionViewCell.swift */; };
 		E9D5DDDC2877F6AB0084F1C7 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D5DDDA2877F6AB0084F1C7 /* MovieCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -70,7 +69,6 @@
 		E9B530A22879DE2800311FC0 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		E9B530A4287A055300311FC0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		E9D5DDD22877DAC60084F1C7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		E9D5DDD42877E33F0084F1C7 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		E9D5DDD92877F6AB0084F1C7 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9D5DDDA2877F6AB0084F1C7 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		F577E3DE4181AAAF274554A9 /* Pods-CoppelTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoppelTest.release.xcconfig"; path = "Target Support Files/Pods-CoppelTest/Pods-CoppelTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 		E9305BCC28774AEF00BCE742 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E9D5DDD42877E33F0084F1C7 /* NavigationViewController.swift */,
 				E9D5DDD02877DA8C0084F1C7 /* Main */,
 				E9305BD228774B3A00BCE742 /* Login */,
 			);
@@ -400,7 +397,6 @@
 				E9305BD72877552E00BCE742 /* CoppelTextField.swift in Sources */,
 				E9B530A32879DE2800311FC0 /* SessionManager.swift in Sources */,
 				E99D812B2878E23000BCF4C0 /* TMDBPosterSize.swift in Sources */,
-				E9D5DDD52877E33F0084F1C7 /* NavigationViewController.swift in Sources */,
 				E94218462877C16F00603650 /* AppColors.swift in Sources */,
 				E942183E2877946500603650 /* AppError.swift in Sources */,
 				E94218422877B4C800603650 /* TMDBSessionResponse.swift in Sources */,

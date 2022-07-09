@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         if let session_id = UserDefaults.standard.value(forKey: "session_id") as? String {
             SessionManager.shared.updateSessionId(session_id)
-            window?.rootViewController = NavigationViewController()
+            window?.rootViewController = MainViewController()
         }else {
             window?.rootViewController = LoginViewController()
         }

@@ -59,7 +59,7 @@
                                                 <rect key="frame" x="0.0" y="55.5" width="217" height="57.5"/>
                                                 <string key="text">Movie name very very very long mano super very long Movie name very very very long mano super very long Movie name very very very long mano super very longMovie name very very very long mano super very long Movie name very very very long mano super very long Movie name very very very long mano super very long</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                <color key="textColor" name="green"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>

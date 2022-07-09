@@ -74,12 +74,8 @@ class MainViewController: UIViewController {
     }
 
     private func configUI() {
-        if let navigationController = self.navigationController {
-            navigationController.isNavigationBarHidden = true
-        }
-        
         view.backgroundColor = AppColors.darkBlue
-        navigationTitle.text = "TV SHOWS"
+        navigationTitle.text = "MOVIES"
         profileButton.addTarget(self, action: #selector(showProfile), for: .touchUpInside)
         navBar.addSubview(profileButton)
         navBar.addSubview(navigationTitle)
