@@ -79,7 +79,7 @@ class LoginViewController: UIViewController {
     }
     
     private func configUI() {
-        view.setGradientBackground(from: AppColors.darkGreen, to: AppColors.lightGreen)
+        view.setGradientBackground(from: UIColor(named: "midGreen")!, to:  UIColor(named: "darkGreen")!)
         stackContainer.addArrangedSubview(logoImage)
         stackContainer.addArrangedSubview(userNameField)
         stackContainer.addArrangedSubview(userPasswordField)

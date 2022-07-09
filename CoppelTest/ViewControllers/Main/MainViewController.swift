@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
 
     let fullNavBar: UIView = {
         let view = UIView()
-        view.backgroundColor = AppColors.darkGray
+        view.backgroundColor = UIColor(named: "darkColor")
         view.layer.cornerRadius = 15.0
         view.layer.masksToBounds = true
         return view
@@ -84,7 +84,7 @@ class MainViewController: UIViewController {
     }
 
     private func configUI() {
-        view.backgroundColor = AppColors.darkBlue
+        view.backgroundColor = UIColor(named: "darkGreen")
         navigationTitle.text = "MOVIES"
         profileButton.addTarget(self, action: #selector(showProfile), for: .touchUpInside)
         navBar.addSubview(profileButton)
@@ -95,7 +95,7 @@ class MainViewController: UIViewController {
         MovieListType.allCases.forEach { type in
             let button = UIButton()
             button.setTitle(type.getSectionName(), for: .normal)
-            button.backgroundColor = .
+            button.backgroundColor = UIColor(named: "buttonOff")
             button.addTarget(self, action: #selector(changeSection), for: .touchUpInside)
             self.menuOptions.append(button)
             menuStackView.addSubview(button)
