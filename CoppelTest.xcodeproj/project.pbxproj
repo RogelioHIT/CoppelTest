@@ -33,6 +33,10 @@
 		E9B530A32879DE2800311FC0 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B530A22879DE2800311FC0 /* SessionManager.swift */; };
 		E9B530A5287A055300311FC0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B530A4287A055300311FC0 /* Date+Extensions.swift */; };
 		E9B530A8287A116900311FC0 /* MovieListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B530A7287A116900311FC0 /* MovieListType.swift */; };
+		E9B530AA287A197100311FC0 /* CoppelSelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B530A9287A197100311FC0 /* CoppelSelectableButton.swift */; };
+		E9B530AC287A2CAC00311FC0 /* TMDBMoviesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B530AB287A2CAC00311FC0 /* TMDBMoviesPage.swift */; };
+		E9B530AF287A41F300311FC0 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9B530AE287A41F300311FC0 /* ProfileView.xib */; };
+		E9B530B1287A421E00311FC0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B530B0287A421E00311FC0 /* ProfileView.swift */; };
 		E9D5DDD32877DAC60084F1C7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD22877DAC60084F1C7 /* MainViewController.swift */; };
 		E9D5DDDB2877F6AB0084F1C7 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD92877F6AB0084F1C7 /* MovieCollectionViewCell.swift */; };
 		E9D5DDDC2877F6AB0084F1C7 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D5DDDA2877F6AB0084F1C7 /* MovieCollectionViewCell.xib */; };
@@ -68,6 +72,10 @@
 		E9B530A22879DE2800311FC0 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		E9B530A4287A055300311FC0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		E9B530A7287A116900311FC0 /* MovieListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListType.swift; sourceTree = "<group>"; };
+		E9B530A9287A197100311FC0 /* CoppelSelectableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoppelSelectableButton.swift; sourceTree = "<group>"; };
+		E9B530AB287A2CAC00311FC0 /* TMDBMoviesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMoviesPage.swift; sourceTree = "<group>"; };
+		E9B530AE287A41F300311FC0 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		E9B530B0287A421E00311FC0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E9D5DDD22877DAC60084F1C7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E9D5DDD92877F6AB0084F1C7 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9D5DDDA2877F6AB0084F1C7 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -134,8 +142,9 @@
 		E9305BCC28774AEF00BCE742 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E9D5DDD02877DA8C0084F1C7 /* Main */,
 				E9305BD228774B3A00BCE742 /* Login */,
+				E9D5DDD02877DA8C0084F1C7 /* Main */,
+				E9B530AD287A412500311FC0 /* Profile View */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +198,7 @@
 			children = (
 				E9305BD62877552E00BCE742 /* CoppelTextField.swift */,
 				E99D811F28788D5500BCF4C0 /* CoppelCollectionView.swift */,
+				E9B530A9287A197100311FC0 /* CoppelSelectableButton.swift */,
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
@@ -220,6 +230,7 @@
 				E942183B287793E700603650 /* TMDBTokenResponse.swift */,
 				E99D81252878DE3100BCF4C0 /* TMDBConfiguration.swift */,
 				E99D81272878E20100BCF4C0 /* TMDBImageConfiguration.swift */,
+				E9B530AB287A2CAC00311FC0 /* TMDBMoviesPage.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -248,6 +259,15 @@
 				E9B530A7287A116900311FC0 /* MovieListType.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		E9B530AD287A412500311FC0 /* Profile View */ = {
+			isa = PBXGroup;
+			children = (
+				E9B530AE287A41F300311FC0 /* ProfileView.xib */,
+				E9B530B0287A421E00311FC0 /* ProfileView.swift */,
+			);
+			path = "Profile View";
 			sourceTree = "<group>";
 		};
 		E9D5DDD02877DA8C0084F1C7 /* Main */ = {
@@ -345,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9B530AF287A41F300311FC0 /* ProfileView.xib in Resources */,
 				E9305BC52877475B00BCE742 /* LaunchScreen.storyboard in Resources */,
 				E9305BC22877475B00BCE742 /* Assets.xcassets in Resources */,
 				E9D5DDDC2877F6AB0084F1C7 /* MovieCollectionViewCell.xib in Resources */,
@@ -410,12 +431,15 @@
 				E99D812028788D5500BCF4C0 /* CoppelCollectionView.swift in Sources */,
 				E942184A2877C99A00603650 /* LoginViewModel.swift in Sources */,
 				E9D5DDD32877DAC60084F1C7 /* MainViewController.swift in Sources */,
+				E9B530AA287A197100311FC0 /* CoppelSelectableButton.swift in Sources */,
 				E9305BD428774B5100BCE742 /* LoginViewController.swift in Sources */,
+				E9B530B1287A421E00311FC0 /* ProfileView.swift in Sources */,
 				E99D8122287894F100BCF4C0 /* MovieViewModel.swift in Sources */,
 				E942184C2877CA0E00603650 /* User.swift in Sources */,
 				E9B530A5287A055300311FC0 /* Date+Extensions.swift in Sources */,
 				E942183928778B1B00603650 /* Endpoints.swift in Sources */,
 				E99D81282878E20100BCF4C0 /* TMDBImageConfiguration.swift in Sources */,
+				E9B530AC287A2CAC00311FC0 /* TMDBMoviesPage.swift in Sources */,
 				E9305BB92877475900BCE742 /* AppDelegate.swift in Sources */,
 				E9305BBB2877475900BCE742 /* SceneDelegate.swift in Sources */,
 				E942183C287793E700603650 /* TMDBTokenResponse.swift in Sources */,
