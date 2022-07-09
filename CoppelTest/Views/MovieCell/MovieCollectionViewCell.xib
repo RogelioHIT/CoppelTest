@@ -76,7 +76,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" name="darkGreen"/>
+                        <color key="backgroundColor" name="midGreen"/>
                         <constraints>
                             <constraint firstItem="5Xl-He-QRM" firstAttribute="height" secondItem="O9w-Th-QqI" secondAttribute="height" multiplier="0.35" id="I1e-Q9-69t"/>
                             <constraint firstAttribute="trailing" secondItem="5Xl-He-QRM" secondAttribute="trailing" constant="8" id="L55-ht-W0s"/>
@@ -108,11 +108,11 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <namedColor name="darkGreen">
-            <color red="0.094117647058823528" green="0.14901960784313725" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="green">
             <color red="0.31764705882352939" green="0.66666666666666663" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="midGreen">
+            <color red="0.12941176470588237" green="0.24313725490196078" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
