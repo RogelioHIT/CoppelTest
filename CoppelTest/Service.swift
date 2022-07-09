@@ -15,7 +15,32 @@ class Service {
         serviceSession = URLSession.shared
     }
     
-    func requestToken(username: String, password: String, completion: @escaping  (RequestTokenResponse?, AppError?) -> Void) {
+    func configuration(token: String, completion: @escaping (TMDBConfiguration?, AppError?) -> Void) {
+        guard let endpointURL = URL(string: Endpoint.configuration.urlString) else {
+            completion(nil, .badRequest)
+            return }
+        
+        serviceSession.dataTask(with: endpointURL){ data, resp, error in
+            if error != nil {
+                completion(nil, .badRequest)
+                return
+            }
+            
+            guard let data = data else {
+                completion(nil, .noData)
+                return
+            }
+            
+            do {
+                let response: TMDBConfiguration = try JSONDecoder().decode(TMDBConfiguration.self, from: data)
+                completion(response, nil)
+            } catch {
+                completion(nil, .decodingError)
+            }
+        }.resume()
+    }
+    
+    func requestToken(username: String, password: String, completion: @escaping  (TMDBTokenResponse?, AppError?) -> Void) {
         guard let endpointURL = URL(string: Endpoint.requestToken.urlString) else {
             completion(nil, .badRequest)
             return }
@@ -31,7 +56,7 @@ class Service {
             }
             
             do {
-                let response: RequestTokenResponse = try JSONDecoder().decode(RequestTokenResponse.self, from: data)
+                let response: TMDBTokenResponse = try JSONDecoder().decode(TMDBTokenResponse.self, from: data)
                 completion(response, nil)
             } catch {
                 completion(nil, .decodingError)
@@ -39,7 +64,7 @@ class Service {
         }.resume()
     }
     
-    func getSessionId(token: String, completion: @escaping  (RequestSessionResponse?, AppError?) -> Void) {
+    func getSessionId(token: String, completion: @escaping  (TMDBSessionResponse?, AppError?) -> Void) {
         guard let endpointURL = URL(string: Endpoint.sessionId.urlString) else {
             completion(nil, .badRequest)
             return }
@@ -68,7 +93,7 @@ class Service {
             }
             
             do {
-                let response: RequestSessionResponse = try JSONDecoder().decode(RequestSessionResponse.self, from: data)
+                let response: TMDBSessionResponse = try JSONDecoder().decode(TMDBSessionResponse.self, from: data)
                 completion(response, nil)
             } catch {
                 completion(nil, .decodingError)

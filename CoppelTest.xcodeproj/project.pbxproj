@@ -17,10 +17,10 @@
 		E9305BDA28777A4300BCE742 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9305BD928777A4300BCE742 /* String+Extensions.swift */; };
 		E9305BDD28777D7C00BCE742 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9305BDC28777D7C00BCE742 /* Service.swift */; };
 		E942183928778B1B00603650 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183828778B1B00603650 /* Endpoints.swift */; };
-		E942183C287793E700603650 /* RequestTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183B287793E700603650 /* RequestTokenResponse.swift */; };
+		E942183C287793E700603650 /* TMDBTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183B287793E700603650 /* TMDBTokenResponse.swift */; };
 		E942183E2877946500603650 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183D2877946500603650 /* AppError.swift */; };
 		E94218402877A9C000603650 /* AuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183F2877A9C000603650 /* AuthWebViewController.swift */; };
-		E94218422877B4C800603650 /* RequestSessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218412877B4C800603650 /* RequestSessionResponse.swift */; };
+		E94218422877B4C800603650 /* TMDBSessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218412877B4C800603650 /* TMDBSessionResponse.swift */; };
 		E94218442877C11400603650 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218432877C11400603650 /* View+Extensions.swift */; };
 		E94218462877C16F00603650 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218452877C16F00603650 /* AppColors.swift */; };
 		E942184A2877C99A00603650 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218492877C99A00603650 /* LoginViewModel.swift */; };
@@ -28,6 +28,9 @@
 		E99D812028788D5500BCF4C0 /* CoppelCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D811F28788D5500BCF4C0 /* CoppelCollectionView.swift */; };
 		E99D8122287894F100BCF4C0 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D8121287894F100BCF4C0 /* MovieViewModel.swift */; };
 		E99D8124287894F800BCF4C0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D8123287894F800BCF4C0 /* Movie.swift */; };
+		E99D81262878DE3100BCF4C0 /* TMDBConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D81252878DE3100BCF4C0 /* TMDBConfiguration.swift */; };
+		E99D81282878E20100BCF4C0 /* TMDBImageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D81272878E20100BCF4C0 /* TMDBImageConfiguration.swift */; };
+		E99D812B2878E23000BCF4C0 /* TMDBPosterSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D812A2878E23000BCF4C0 /* TMDBPosterSize.swift */; };
 		E9D5DDD32877DAC60084F1C7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD22877DAC60084F1C7 /* MainViewController.swift */; };
 		E9D5DDD52877E33F0084F1C7 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD42877E33F0084F1C7 /* NavigationViewController.swift */; };
 		E9D5DDDB2877F6AB0084F1C7 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD92877F6AB0084F1C7 /* MovieCollectionViewCell.swift */; };
@@ -48,10 +51,10 @@
 		E9305BD928777A4300BCE742 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		E9305BDC28777D7C00BCE742 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		E942183828778B1B00603650 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
-		E942183B287793E700603650 /* RequestTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTokenResponse.swift; sourceTree = "<group>"; };
+		E942183B287793E700603650 /* TMDBTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBTokenResponse.swift; sourceTree = "<group>"; };
 		E942183D2877946500603650 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		E942183F2877A9C000603650 /* AuthWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebViewController.swift; sourceTree = "<group>"; };
-		E94218412877B4C800603650 /* RequestSessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSessionResponse.swift; sourceTree = "<group>"; };
+		E94218412877B4C800603650 /* TMDBSessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBSessionResponse.swift; sourceTree = "<group>"; };
 		E94218432877C11400603650 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		E94218452877C16F00603650 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		E94218492877C99A00603650 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -59,6 +62,9 @@
 		E99D811F28788D5500BCF4C0 /* CoppelCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoppelCollectionView.swift; sourceTree = "<group>"; };
 		E99D8121287894F100BCF4C0 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		E99D8123287894F800BCF4C0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E99D81252878DE3100BCF4C0 /* TMDBConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBConfiguration.swift; sourceTree = "<group>"; };
+		E99D81272878E20100BCF4C0 /* TMDBImageConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBImageConfiguration.swift; sourceTree = "<group>"; };
+		E99D812A2878E23000BCF4C0 /* TMDBPosterSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBPosterSize.swift; sourceTree = "<group>"; };
 		E9D5DDD22877DAC60084F1C7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E9D5DDD42877E33F0084F1C7 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		E9D5DDD92877F6AB0084F1C7 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -198,10 +204,9 @@
 		E9305BDB28777D6B00BCE742 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				E99D81292878E21F00BCF4C0 /* Enum */,
 				E942183A287793CC00603650 /* Model */,
 				E9305BDC28777D7C00BCE742 /* Service.swift */,
-				E942183828778B1B00603650 /* Endpoints.swift */,
-				E942183D2877946500603650 /* AppError.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -209,10 +214,22 @@
 		E942183A287793CC00603650 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E94218412877B4C800603650 /* RequestSessionResponse.swift */,
-				E942183B287793E700603650 /* RequestTokenResponse.swift */,
+				E94218412877B4C800603650 /* TMDBSessionResponse.swift */,
+				E942183B287793E700603650 /* TMDBTokenResponse.swift */,
+				E99D81252878DE3100BCF4C0 /* TMDBConfiguration.swift */,
+				E99D81272878E20100BCF4C0 /* TMDBImageConfiguration.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E99D81292878E21F00BCF4C0 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				E942183828778B1B00603650 /* Endpoints.swift */,
+				E942183D2877946500603650 /* AppError.swift */,
+				E99D812A2878E23000BCF4C0 /* TMDBPosterSize.swift */,
+			);
+			name = Enum;
 			sourceTree = "<group>";
 		};
 		E9D5DDD02877DA8C0084F1C7 /* Main */ = {
@@ -367,10 +384,11 @@
 				E9305BDA28777A4300BCE742 /* String+Extensions.swift in Sources */,
 				E94218402877A9C000603650 /* AuthWebViewController.swift in Sources */,
 				E9305BD72877552E00BCE742 /* CoppelTextField.swift in Sources */,
+				E99D812B2878E23000BCF4C0 /* TMDBPosterSize.swift in Sources */,
 				E9D5DDD52877E33F0084F1C7 /* NavigationViewController.swift in Sources */,
 				E94218462877C16F00603650 /* AppColors.swift in Sources */,
 				E942183E2877946500603650 /* AppError.swift in Sources */,
-				E94218422877B4C800603650 /* RequestSessionResponse.swift in Sources */,
+				E94218422877B4C800603650 /* TMDBSessionResponse.swift in Sources */,
 				E99D812028788D5500BCF4C0 /* CoppelCollectionView.swift in Sources */,
 				E942184A2877C99A00603650 /* LoginViewModel.swift in Sources */,
 				E9D5DDD32877DAC60084F1C7 /* MainViewController.swift in Sources */,
@@ -378,13 +396,15 @@
 				E99D8122287894F100BCF4C0 /* MovieViewModel.swift in Sources */,
 				E942184C2877CA0E00603650 /* User.swift in Sources */,
 				E942183928778B1B00603650 /* Endpoints.swift in Sources */,
+				E99D81282878E20100BCF4C0 /* TMDBImageConfiguration.swift in Sources */,
 				E9305BB92877475900BCE742 /* AppDelegate.swift in Sources */,
 				E9305BBB2877475900BCE742 /* SceneDelegate.swift in Sources */,
-				E942183C287793E700603650 /* RequestTokenResponse.swift in Sources */,
+				E942183C287793E700603650 /* TMDBTokenResponse.swift in Sources */,
 				E9D5DDDB2877F6AB0084F1C7 /* MovieCollectionViewCell.swift in Sources */,
 				E94218442877C11400603650 /* View+Extensions.swift in Sources */,
 				E9305BDD28777D7C00BCE742 /* Service.swift in Sources */,
 				E99D8124287894F800BCF4C0 /* Movie.swift in Sources */,
+				E99D81262878DE3100BCF4C0 /* TMDBConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

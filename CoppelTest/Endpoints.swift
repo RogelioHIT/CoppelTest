@@ -12,10 +12,13 @@ enum Endpoint {
     case requestToken
     case authenticate
     case sessionId
+    case configuration
 
     var urlString: String {
         get {
             switch self {
+            case .configuration:
+                return "https://api.themoviedb.org/3/configuration?api_key=\(Endpoint.API_KEY)"
             case .authenticate:
                 return "https://www.themoviedb.org/authenticate/"
             case .requestToken:
@@ -29,7 +32,7 @@ enum Endpoint {
     var method: String? {
         get {
             switch self {
-            case .requestToken:
+            case .requestToken, .configuration:
                 return "GET"
             case .sessionId:
                 return "POST"

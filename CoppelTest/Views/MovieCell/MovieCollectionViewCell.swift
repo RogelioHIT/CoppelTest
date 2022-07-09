@@ -17,6 +17,9 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.posterImage.addRoundedCorners(radius: 25.0)
+        self.contentView.addRoundedCorners(radius: 25.0)
     }
     
     func config(with movie: MovieViewModel) {

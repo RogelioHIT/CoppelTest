@@ -8,6 +8,12 @@
 import UIKit
 
 extension UIView {
+    
+    func addRoundedCorners(radius: CGFloat) {
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+    }
+    
     func setGradientBackground(from color1:UIColor, to color2: UIColor) {
         let colorTop =  color1.cgColor
         let colorBottom = color2.cgColor

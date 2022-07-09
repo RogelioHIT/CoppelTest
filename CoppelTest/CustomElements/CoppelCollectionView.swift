@@ -26,16 +26,10 @@ class CoppelCollectionView: UICollectionView {
     }
     
     func configCollectionView() {
-        
         self.backgroundColor = UIColor.clear
         self.backgroundView = UIView(frame: CGRect.zero)
         let cellNib = UINib(nibName: "MovieCollectionViewCell", bundle: nil)
         self.register(cellNib, forCellWithReuseIdentifier: movieCellId)
-    }
-    
-    func configUI() {
-        self.backgroundColor = .purple
-        self.backgroundView?.backgroundColor = .purple
     }
     
     func fillWithDummyData() {
@@ -71,13 +65,13 @@ extension CoppelCollectionView: UICollectionViewDelegateFlowLayout {
     
         // aspect ratio of the designed cell
         let aspectRatio: CGFloat = 62/121
-        let space: CGFloat = 24.0 // space left
+        let space: CGFloat = 16.0 // space left
         let width: CGFloat = (collectionView.frame.size.width - space) / 2.0
         return CGSize(width: width, height: width / aspectRatio)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 24.0
+        return 16.0
     }
     
     
