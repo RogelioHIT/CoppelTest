@@ -7,5 +7,6 @@ target 'CoppelTest' do
 
   # Pods for CoppelTest
   pod 'ActivityIndicatorManager'
+  pod 'SDWebImage/MapKit'
 
 end

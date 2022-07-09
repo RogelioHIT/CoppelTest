@@ -1,16 +1,22 @@
 PODS:
   - ActivityIndicatorManager (2.1.0)
+  - SDWebImage/Core (5.12.6)
+  - SDWebImage/MapKit (5.12.6):
+    - SDWebImage/Core
 
 DEPENDENCIES:
   - ActivityIndicatorManager
+  - SDWebImage/MapKit
 
 SPEC REPOS:
   trunk:
     - ActivityIndicatorManager
+    - SDWebImage
 
 SPEC CHECKSUMS:
   ActivityIndicatorManager: 31087524844ff5a00ee95a905931b7420fdf3cc1
+  SDWebImage: a47aea9e3d8816015db4e523daff50cfd294499d
 
-PODFILE CHECKSUM: 95baa85b9047976c66f3307c4369bf8d40c73388
+PODFILE CHECKSUM: ac9955d036d1101a265d106f3820a59dd9b119b7
 
 COCOAPODS: 1.11.3
