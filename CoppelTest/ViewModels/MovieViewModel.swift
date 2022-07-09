@@ -32,31 +32,7 @@ struct MovieViewModel {
 // MARK: Services
 extension MovieViewModel {
     func requestMovies(completion: @escaping (String?, AppError?) -> Void) {
-        Service.shared.requestToken(username: userName, password: userPassword) { response, error in
-            guard let resp = response, error == nil else {
-                DispatchQueue.main.async {
-                    completion(nil, error)
-                }
-                return
-            }
-            DispatchQueue.main.async {
-                completion(resp.request_token, nil)
-            }
-        }
-    }
-    
-    func requestSessionId(token: String, completion: @escaping (String?, AppError?) -> Void) {
-        Service.shared.getSessionId(token: token) { response, error in
-            guard let resp = response, error == nil else {
-                DispatchQueue.main.async {
-                    completion(nil, error)
-                }
-                return
-            }
-            DispatchQueue.main.async {
-                completion(resp.session_id, nil)
-            }
-        }
+
     }
 }
 
