@@ -15,7 +15,7 @@ class Service {
         serviceSession = URLSession.shared
     }
     
-    func configuration(token: String, completion: @escaping (TMDBConfiguration?, AppError?) -> Void) {
+    func configuration(completion: @escaping (TMDBConfiguration?, AppError?) -> Void) {
         guard let endpointURL = URL(string: Endpoint.configuration.urlString) else {
             completion(nil, .badRequest)
             return }
@@ -30,11 +30,12 @@ class Service {
                 completion(nil, .noData)
                 return
             }
-            
+
             do {
                 let response: TMDBConfiguration = try JSONDecoder().decode(TMDBConfiguration.self, from: data)
                 completion(response, nil)
             } catch {
+                print(error.localizedDescription)
                 completion(nil, .decodingError)
             }
         }.resume()

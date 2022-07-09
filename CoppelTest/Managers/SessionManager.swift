@@ -10,8 +10,8 @@ import Foundation
 class SessionManager {
     static let shared: SessionManager = SessionManager()
     
-    var sessionId: String?
-    var configuraion: TMDBConfiguration?
+    private var sessionId: String?
+    private var configuraion: TMDBConfiguration?
     
     private init() {}
     
@@ -21,5 +21,9 @@ class SessionManager {
     
     func updateConfiguration(_ configuration: TMDBConfiguration) {
         self.configuraion = configuration
+    }
+    
+    func getImagesConfiguration() -> TMDBImageConfiguration? {
+        return self.configuraion?.images
     }
 }

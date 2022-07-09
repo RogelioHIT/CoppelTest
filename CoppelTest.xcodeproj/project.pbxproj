@@ -32,6 +32,7 @@
 		E99D81282878E20100BCF4C0 /* TMDBImageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D81272878E20100BCF4C0 /* TMDBImageConfiguration.swift */; };
 		E99D812B2878E23000BCF4C0 /* TMDBPosterSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D812A2878E23000BCF4C0 /* TMDBPosterSize.swift */; };
 		E9B530A32879DE2800311FC0 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B530A22879DE2800311FC0 /* SessionManager.swift */; };
+		E9B530A5287A055300311FC0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B530A4287A055300311FC0 /* Date+Extensions.swift */; };
 		E9D5DDD32877DAC60084F1C7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD22877DAC60084F1C7 /* MainViewController.swift */; };
 		E9D5DDD52877E33F0084F1C7 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD42877E33F0084F1C7 /* NavigationViewController.swift */; };
 		E9D5DDDB2877F6AB0084F1C7 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD92877F6AB0084F1C7 /* MovieCollectionViewCell.swift */; };
@@ -67,6 +68,7 @@
 		E99D81272878E20100BCF4C0 /* TMDBImageConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBImageConfiguration.swift; sourceTree = "<group>"; };
 		E99D812A2878E23000BCF4C0 /* TMDBPosterSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBPosterSize.swift; sourceTree = "<group>"; };
 		E9B530A22879DE2800311FC0 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		E9B530A4287A055300311FC0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		E9D5DDD22877DAC60084F1C7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E9D5DDD42877E33F0084F1C7 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		E9D5DDD92877F6AB0084F1C7 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			children = (
 				E9305BD928777A4300BCE742 /* String+Extensions.swift */,
 				E94218432877C11400603650 /* View+Extensions.swift */,
+				E9B530A4287A055300311FC0 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				E9305BD428774B5100BCE742 /* LoginViewController.swift in Sources */,
 				E99D8122287894F100BCF4C0 /* MovieViewModel.swift in Sources */,
 				E942184C2877CA0E00603650 /* User.swift in Sources */,
+				E9B530A5287A055300311FC0 /* Date+Extensions.swift in Sources */,
 				E942183928778B1B00603650 /* Endpoints.swift in Sources */,
 				E99D81282878E20100BCF4C0 /* TMDBImageConfiguration.swift in Sources */,
 				E9305BB92877475900BCE742 /* AppDelegate.swift in Sources */,

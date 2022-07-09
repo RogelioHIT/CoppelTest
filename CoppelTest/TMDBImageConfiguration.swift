@@ -10,5 +10,13 @@ import Foundation
 struct TMDBImageConfiguration: Codable {
     let base_url: String
     let secure_base_url: String
-    let poster_sizes: TMDBPosterSize
+    let poster_sizes: [TMDBPosterSize]
+    
+    func getValidPosterSize(size: TMDBPosterSize) -> TMDBPosterSize {
+        if poster_sizes.contains(where: { $0 == size }) {
+            return size
+        } else {
+            return TMDBPosterSize.original
+        }
+    }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ActivityIndicatorManager
 
 class MainViewController: UIViewController {
 
@@ -41,6 +42,7 @@ class MainViewController: UIViewController {
     
     let collectionView: CoppelCollectionView = {
         let cv = CoppelCollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
+        cv.isHidden = true
         return cv
     }()
     
@@ -49,7 +51,22 @@ class MainViewController: UIViewController {
 
         configUI()
         configLayout()
-        addActions()
+        
+        updateSessionConfiguration { config in
+            guard let config = config else {
+                print("No configuration available")
+                DispatchQueue.main.async {
+                    AIMActivityIndicatorManager.sharedInstance.shouldHideIndicator()
+                }
+                return
+            }
+            
+            SessionManager.shared.updateConfiguration(config)
+            DispatchQueue.main.async {
+                AIMActivityIndicatorManager.sharedInstance.shouldHideIndicator()
+                self.collectionView.isHidden = false
+            }
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -103,11 +120,20 @@ class MainViewController: UIViewController {
         collectionView.bottomAnchor.constraint(equalTo:  view.bottomAnchor,  constant: 0.0).isActive = true
         collectionView.topAnchor.constraint(equalTo:  fullNavBar.bottomAnchor,  constant: 32.0).isActive = true
     }
-    
-    private func addActions() {
+}
 
+// MARK: Service
+extension MainViewController {
+    func updateSessionConfiguration(completion: @escaping (TMDBConfiguration?) -> Void) {
+        AIMActivityIndicatorManager.sharedInstance.shouldShowIndicator()
+        Service.shared.configuration { configuration, error in
+            if error != nil {
+                completion(nil)
+                return
+            }
+            completion(configuration)
+        }
     }
-
 }
 
 // MARK: Actions

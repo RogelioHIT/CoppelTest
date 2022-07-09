@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9w-Th-QqI" userLabel="backgroundView">
                         <rect key="frame" x="0.0" y="0.0" width="233" height="368"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LXn-r1-4vO" userLabel="MoviePoster">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LXn-r1-4vO" userLabel="MoviePoster">
                                 <rect key="frame" x="0.0" y="0.0" width="233" height="231"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -28,40 +27,36 @@
                                 <rect key="frame" x="8" y="231" width="217" height="129"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FSP-9q-0Go">
-                                        <rect key="frame" x="4" y="4" width="209" height="121"/>
+                                        <rect key="frame" x="0.0" y="8" width="217" height="113"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luca" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rK-dL-nj1">
-                                                <rect key="frame" x="0.0" y="0.0" width="209" height="12"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="217" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" name="green"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0nF-Qb-fBv" userLabel="secondLine stackview">
-                                                <rect key="frame" x="0.0" y="31.5" width="209" height="24"/>
+                                                <rect key="frame" x="0.0" y="35.5" width="217" height="12"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="June 17, 2021" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkt-vm-Iig">
-                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="12"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <color key="textColor" name="green"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWA-dN-8h8">
-                                                        <rect key="frame" x="159" y="0.0" width="50" height="24"/>
-                                                        <color key="tintColor" name="green"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="5.2" imagePadding="2">
-                                                            <imageReference key="image" image="star.fill" catalog="system" symbolScale="default" renderingMode="template"/>
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="7"/>
-                                                            <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="8"/>
-                                                        </buttonConfiguration>
-                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★ 0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTq-TG-8oJ" userLabel="Score Label">
+                                                        <rect key="frame" x="152" y="0.0" width="65" height="12"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <color key="textColor" name="green"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="mWA-dN-8h8" firstAttribute="width" secondItem="0nF-Qb-fBv" secondAttribute="width" multiplier="0.24" id="9Gv-R1-APn"/>
+                                                    <constraint firstItem="vTq-TG-8oJ" firstAttribute="width" secondItem="0nF-Qb-fBv" secondAttribute="width" multiplier="0.3" id="iZh-SY-v0g"/>
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6o-AP-Pyw">
-                                                <rect key="frame" x="0.0" y="63.5" width="209" height="57.5"/>
+                                                <rect key="frame" x="0.0" y="55.5" width="217" height="57.5"/>
                                                 <string key="text">Movie name very very very long mano super very long Movie name very very very long mano super very long Movie name very very very long mano super very longMovie name very very very long mano super very long Movie name very very very long mano super very long Movie name very very very long mano super very long</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                 <color key="textColor" name="green"/>
@@ -74,10 +69,10 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="FSP-9q-0Go" secondAttribute="bottom" constant="4" id="Ezz-Rj-4pn"/>
-                                    <constraint firstItem="FSP-9q-0Go" firstAttribute="leading" secondItem="5Xl-He-QRM" secondAttribute="leading" constant="4" id="MLa-Kg-5ns"/>
-                                    <constraint firstAttribute="trailing" secondItem="FSP-9q-0Go" secondAttribute="trailing" constant="4" id="d0Z-Ue-zgr"/>
-                                    <constraint firstItem="FSP-9q-0Go" firstAttribute="top" secondItem="5Xl-He-QRM" secondAttribute="top" constant="4" id="nBP-q1-V3A"/>
+                                    <constraint firstAttribute="bottom" secondItem="FSP-9q-0Go" secondAttribute="bottom" constant="8" id="Ezz-Rj-4pn"/>
+                                    <constraint firstItem="FSP-9q-0Go" firstAttribute="leading" secondItem="5Xl-He-QRM" secondAttribute="leading" id="MLa-Kg-5ns"/>
+                                    <constraint firstAttribute="trailing" secondItem="FSP-9q-0Go" secondAttribute="trailing" id="d0Z-Ue-zgr"/>
+                                    <constraint firstItem="FSP-9q-0Go" firstAttribute="top" secondItem="5Xl-He-QRM" secondAttribute="top" constant="8" id="nBP-q1-V3A"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -107,13 +102,12 @@
                 <outlet property="descriptionLabel" destination="u6o-AP-Pyw" id="CWH-Sb-geP"/>
                 <outlet property="nameLabel" destination="9rK-dL-nj1" id="U04-wI-Rf6"/>
                 <outlet property="posterImage" destination="LXn-r1-4vO" id="T2Y-qY-6YO"/>
-                <outlet property="scoreLabel" destination="mWA-dN-8h8" id="4Oz-GT-UOT"/>
+                <outlet property="scoreLabel" destination="vTq-TG-8oJ" id="C82-SX-pXf"/>
             </connections>
             <point key="canvasLocation" x="25.362318840579711" y="121.875"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="darkGreen">
             <color red="0.094117647058823528" green="0.14901960784313725" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

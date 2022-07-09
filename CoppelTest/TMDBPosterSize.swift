@@ -8,8 +8,11 @@
 import Foundation
 
 enum TMDBPosterSize: String, Codable {
-    case small = "w154"
-    case medium = "w342"
-    case big = "w780"
-    case original = "original"
+    case w92
+    case w154
+    case w185
+    case w342
+    case w500
+    case w780
+    case original
 }
