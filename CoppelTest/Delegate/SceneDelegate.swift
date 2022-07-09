@@ -17,12 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-//        if let session_id = UserDefaults.standard.value(forKey: "session_id") as? String {
-//            SessionManager.shared.updateSessionId(session_id)
-//            window?.rootViewController = MainViewController()
-//        }else {
+        if let session_id = UserDefaults.standard.value(forKey: "session_id") as? String {
+            SessionManager.shared.updateSessionId(session_id)
+            window?.rootViewController = MainViewController()
+        }else {
             window?.rootViewController = LoginViewController()
-//        }
+        }
         window?.makeKeyAndVisible()
     }
     
