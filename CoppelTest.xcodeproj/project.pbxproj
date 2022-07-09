@@ -22,7 +22,6 @@
 		E94218402877A9C000603650 /* AuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942183F2877A9C000603650 /* AuthWebViewController.swift */; };
 		E94218422877B4C800603650 /* TMDBSessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218412877B4C800603650 /* TMDBSessionResponse.swift */; };
 		E94218442877C11400603650 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218432877C11400603650 /* View+Extensions.swift */; };
-		E94218462877C16F00603650 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218452877C16F00603650 /* AppColors.swift */; };
 		E942184A2877C99A00603650 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94218492877C99A00603650 /* LoginViewModel.swift */; };
 		E942184C2877CA0E00603650 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942184B2877CA0E00603650 /* User.swift */; };
 		E99D812028788D5500BCF4C0 /* CoppelCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D811F28788D5500BCF4C0 /* CoppelCollectionView.swift */; };
@@ -33,6 +32,7 @@
 		E99D812B2878E23000BCF4C0 /* TMDBPosterSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D812A2878E23000BCF4C0 /* TMDBPosterSize.swift */; };
 		E9B530A32879DE2800311FC0 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B530A22879DE2800311FC0 /* SessionManager.swift */; };
 		E9B530A5287A055300311FC0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B530A4287A055300311FC0 /* Date+Extensions.swift */; };
+		E9B530A8287A116900311FC0 /* MovieListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B530A7287A116900311FC0 /* MovieListType.swift */; };
 		E9D5DDD32877DAC60084F1C7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD22877DAC60084F1C7 /* MainViewController.swift */; };
 		E9D5DDDB2877F6AB0084F1C7 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5DDD92877F6AB0084F1C7 /* MovieCollectionViewCell.swift */; };
 		E9D5DDDC2877F6AB0084F1C7 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D5DDDA2877F6AB0084F1C7 /* MovieCollectionViewCell.xib */; };
@@ -57,7 +57,6 @@
 		E942183F2877A9C000603650 /* AuthWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebViewController.swift; sourceTree = "<group>"; };
 		E94218412877B4C800603650 /* TMDBSessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBSessionResponse.swift; sourceTree = "<group>"; };
 		E94218432877C11400603650 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
-		E94218452877C16F00603650 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		E94218492877C99A00603650 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E942184B2877CA0E00603650 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E99D811F28788D5500BCF4C0 /* CoppelCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoppelCollectionView.swift; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		E99D812A2878E23000BCF4C0 /* TMDBPosterSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBPosterSize.swift; sourceTree = "<group>"; };
 		E9B530A22879DE2800311FC0 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		E9B530A4287A055300311FC0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		E9B530A7287A116900311FC0 /* MovieListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListType.swift; sourceTree = "<group>"; };
 		E9D5DDD22877DAC60084F1C7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E9D5DDD92877F6AB0084F1C7 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9D5DDDA2877F6AB0084F1C7 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -170,7 +170,6 @@
 		E9305BD028774B1F00BCE742 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E94218452877C16F00603650 /* AppColors.swift */,
 				E9305BC12877475B00BCE742 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -243,9 +242,18 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		E9B530A6287A115400311FC0 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				E9B530A7287A116900311FC0 /* MovieListType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		E9D5DDD02877DA8C0084F1C7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E9B530A6287A115400311FC0 /* Enum */,
 				E9D5DDD22877DAC60084F1C7 /* MainViewController.swift */,
 			);
 			path = Main;
@@ -397,7 +405,6 @@
 				E9305BD72877552E00BCE742 /* CoppelTextField.swift in Sources */,
 				E9B530A32879DE2800311FC0 /* SessionManager.swift in Sources */,
 				E99D812B2878E23000BCF4C0 /* TMDBPosterSize.swift in Sources */,
-				E94218462877C16F00603650 /* AppColors.swift in Sources */,
 				E942183E2877946500603650 /* AppError.swift in Sources */,
 				E94218422877B4C800603650 /* TMDBSessionResponse.swift in Sources */,
 				E99D812028788D5500BCF4C0 /* CoppelCollectionView.swift in Sources */,
@@ -416,6 +423,7 @@
 				E94218442877C11400603650 /* View+Extensions.swift in Sources */,
 				E9305BDD28777D7C00BCE742 /* Service.swift in Sources */,
 				E99D8124287894F800BCF4C0 /* Movie.swift in Sources */,
+				E9B530A8287A116900311FC0 /* MovieListType.swift in Sources */,
 				E99D81262878DE3100BCF4C0 /* TMDBConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
