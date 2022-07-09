@@ -15,6 +15,6 @@ struct Movie: Codable {
     let overview: String
     let release_date: String
     let original_language: String
-    let original_name: String
+    let original_title: String
     let video: Bool
 }
