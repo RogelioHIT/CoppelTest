@@ -9,6 +9,10 @@ import Foundation
 
 enum Endpoint {
     static let API_KEY: String = "5650d15b02b02e76cc7f3fe5863b98c4"
+    case popularMovies
+    case topRatedMovies
+    case upcomingMovies
+    case nowPlayingMovies
     case requestToken
     case authenticate
     case sessionId
@@ -17,6 +21,14 @@ enum Endpoint {
     var urlString: String {
         get {
             switch self {
+            case .popularMovies:
+                return "https://api.themoviedb.org/3/movie/top_rated?api_key=\(Endpoint.API_KEY)"
+            case .topRatedMovies:
+                return "https://api.themoviedb.org/3/movie/popular?api_key=\(Endpoint.API_KEY)"
+            case .upcomingMovies:
+                return "https://api.themoviedb.org/3/movie/upcoming?api_key=\(Endpoint.API_KEY)"
+            case .nowPlayingMovies:
+                return "https://api.themoviedb.org/3/movie/now_playing?api_key=\(Endpoint.API_KEY)"
             case .configuration:
                 return "https://api.themoviedb.org/3/configuration?api_key=\(Endpoint.API_KEY)"
             case .authenticate:

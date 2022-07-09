@@ -15,6 +15,44 @@ class Service {
         serviceSession = URLSession.shared
     }
     
+    func getMovieList(type: MovieListType, completion: @escaping (TMDBMoviesPage?, AppError?) -> Void) {
+        let endpointString: String!
+        switch type {
+        case .popular:
+            endpointString = Endpoint.popularMovies.urlString
+        case .topRated:
+            endpointString = Endpoint.topRatedMovies.urlString
+        case .upcoming:
+            endpointString = Endpoint.upcomingMovies.urlString
+        case .nowPlaying:
+            endpointString = Endpoint.nowPlayingMovies.urlString
+        }
+        
+        guard let endpointURL = URL(string: endpointString) else {
+            completion(nil, .badRequest)
+            return }
+        
+        serviceSession.dataTask(with: endpointURL){ data, resp, error in
+            if error != nil {
+                completion(nil, .badRequest)
+                return
+            }
+            
+            guard let data = data else {
+                completion(nil, .noData)
+                return
+            }
+
+            do {
+                let response: TMDBMoviesPage = try JSONDecoder().decode(TMDBMoviesPage.self, from: data)
+                completion(response, nil)
+            } catch {
+                print(error.localizedDescription)
+                completion(nil, .decodingError)
+            }
+        }.resume()
+    }
+    
     func configuration(completion: @escaping (TMDBConfiguration?, AppError?) -> Void) {
         guard let endpointURL = URL(string: Endpoint.configuration.urlString) else {
             completion(nil, .badRequest)
