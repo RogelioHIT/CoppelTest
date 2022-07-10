@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
         button.tintColor = .white
         return button
     }()
-    
+     
     let menuStackView: UIStackView = {
        let sv = UIStackView()
         sv.alignment = .center
@@ -108,6 +108,8 @@ class MainViewController: UIViewController {
         }
         view.addSubview(menuStackView)
         view.addSubview(collectionView)
+        
+        collectionView.collectionViewDelegate = self
     }
     
     private func configLayout() {
@@ -151,12 +153,39 @@ class MainViewController: UIViewController {
     
     func showProfile() {
         print("show profile")
-        let profile = ProfileViewController()
-        self.present(profile, animated: true)
     }
     
     func logOut() {
         print("Log out")
+        guard let sessionId = SessionManager.shared.getSessionId() else {
+            return
+        }
+        
+        Service.shared.deleteSession(sessionId: sessionId) { result in
+            if result {
+                SessionManager.shared.deleteSessionId()
+                print(UserDefaults.standard.dictionaryRepresentation().keys)
+                DispatchQueue.main.async {
+                    self.presentLogin()
+                }
+            }
+        }
+    }
+    
+    func presentLogin() {
+        let scene = UIApplication.shared.connectedScenes.first
+        if let sd : SceneDelegate = (scene?.delegate as? SceneDelegate) {
+            sd.window?.rootViewController = LoginViewController()
+            sd.window?.makeKeyAndVisible()
+        }
+    }
+    
+    func showDetail(movie: MovieViewModel) {
+        let detailView = DetailViewController()
+        detailView.movie = movie
+        detailView.modalPresentationStyle = .pageSheet
+        detailView.modalTransitionStyle = .coverVertical
+        self.present(detailView, animated: true)
     }
 }
 
@@ -221,5 +250,12 @@ extension MainViewController {
                 self.collectionView.reloadData()
             }
         }
+    }
+}
+
+// MARK: Collectionview delegate
+extension MainViewController: CoppelCollectionViewDelegate {
+    func selectedCell(movie: MovieViewModel) {
+        showDetail(movie: movie)
     }
 }

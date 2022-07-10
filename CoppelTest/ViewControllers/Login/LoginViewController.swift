@@ -122,6 +122,14 @@ class LoginViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(login))
         loginButton.addGestureRecognizer(tapGesture)
     }
+    
+    func showMainViewController() {
+        let scene = UIApplication.shared.connectedScenes.first
+        if let sd : SceneDelegate = (scene?.delegate as? SceneDelegate) {
+            sd.window?.rootViewController = MainViewController()
+            sd.window?.makeKeyAndVisible()
+        }
+    }
 }
 
 
@@ -203,7 +211,8 @@ extension LoginViewController: AuthWebViewDelegate {
                                 
                 print("Login waws a success!")
                 print("Your session id is \(sessionId)")
-                UserDefaults.standard.set(sessionId, forKey: "session_id")
+                SessionManager.shared.updateSessionId(sessionId)
+                self.showMainViewController()
             }
         }else {
             self.showErrorMessage(.loginDenied)

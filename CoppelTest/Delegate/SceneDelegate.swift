@@ -17,8 +17,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        if let session_id = UserDefaults.standard.value(forKey: "session_id") as? String {
-            SessionManager.shared.updateSessionId(session_id)
+        
+        print(UserDefaults.standard.dictionaryRepresentation().keys)
+
+        if let session_id = SessionManager.shared.getSessionId() {
+//            SessionManager.shared.updateSessionId(session_id)
             window?.rootViewController = MainViewController()
         }else {
             window?.rootViewController = LoginViewController()

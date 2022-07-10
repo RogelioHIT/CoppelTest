@@ -17,6 +17,7 @@ enum Endpoint {
     case authenticate
     case sessionId
     case configuration
+    case logout
 
     var urlString: String {
         get {
@@ -37,6 +38,8 @@ enum Endpoint {
                 return "https://api.themoviedb.org/3/authentication/token/new?api_key=\(Endpoint.API_KEY)"
             case .sessionId:
                 return "https://api.themoviedb.org/3/authentication/session/new?api_key=\(Endpoint.API_KEY)"
+            case .logout:
+                return "https://api.themoviedb.org/3/authentication/session?api_key=\(Endpoint.API_KEY)"
             }
         }
     }
@@ -48,6 +51,8 @@ enum Endpoint {
                 return "GET"
             case .sessionId:
                 return "POST"
+            case .logout:
+                return "DELETE"
             default:
                 return nil
             }

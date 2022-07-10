@@ -20,8 +20,16 @@ extension UIView {
                     
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorBottom, colorTop]
-        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.locations = [0.0, 1]
         gradientLayer.frame = self.bounds
         self.layer.insertSublayer(gradientLayer, at:0)
+    }
+
+    func addShadow() {
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 1
+        self.layer.shadowOffset = .zero
+        self.layer.shadowRadius = 5
+        self.layer.masksToBounds = false
     }
 }

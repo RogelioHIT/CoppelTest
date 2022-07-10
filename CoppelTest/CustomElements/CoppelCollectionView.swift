@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol CoppelCollectionViewDelegate: AnyObject {
+    func selectedCell(movie: MovieViewModel)
+}
+
 class CoppelCollectionView: UICollectionView {
     
     var movieCellId = "MovieCollectionViewCell"
     var movies = [MovieViewModel]()
+    
+    weak var collectionViewDelegate: CoppelCollectionViewDelegate?
 
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -57,6 +63,13 @@ extension CoppelCollectionView: UICollectionViewDelegate, UICollectionViewDataSo
             cell.config(with: viewModelForCell)
         }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewModelForCell = movies[indexPath.item]
+        if let delegate = self.collectionViewDelegate {
+            delegate.selectedCell(movie: viewModelForCell)
+        }
     }
 }
 

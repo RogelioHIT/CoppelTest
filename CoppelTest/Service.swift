@@ -53,6 +53,30 @@ class Service {
         }.resume()
     }
     
+    func deleteSession(sessionId: String, completion: @escaping  (Bool) -> Void) {
+        guard let endpointURL = URL(string: Endpoint.logout.urlString) else {
+            completion(false)
+            return }
+        
+        var request = URLRequest(url: endpointURL)
+        request.httpMethod = Endpoint.logout.method
+
+        serviceSession.dataTask(with: request) { data, resp, error in
+            if error != nil {
+                completion(false)
+                return
+            }
+            
+            guard data != nil else {
+                completion(false)
+                return
+            }
+            
+            completion(true)
+        }.resume()
+    }
+    
+    
     func configuration(completion: @escaping (TMDBConfiguration?, AppError?) -> Void) {
         guard let endpointURL = URL(string: Endpoint.configuration.urlString) else {
             completion(nil, .badRequest)
