@@ -18,8 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        print(UserDefaults.standard.dictionaryRepresentation().keys)
-
         if let _ = SessionManager.shared.getSessionId() {
             window?.rootViewController = MainViewController()
         }else {

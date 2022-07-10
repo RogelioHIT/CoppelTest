@@ -6,16 +6,20 @@
 //
 
 import UIKit
+import ActivityIndicatorManager
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var modalView: UIView!
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var originalNameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var isAdultMovie: UIImageView!
+
     
-    var movie: MovieViewModel!
+    var movieId: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,24 +29,53 @@ class DetailViewController: UIViewController {
         view.addGestureRecognizer(dismissGesture)
         
         configUI()
+        getMovieInfo(id: movieId) { movie in
+            DispatchQueue.main.async {
+                AIMActivityIndicatorManager.sharedInstance.shouldHideIndicator()
+                
+                if let movie = movie {
+                    self.config(with: movie)
+                }
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        config(with: movie)
     }
     
     func config(with movie: MovieViewModel) {
-        nameLabel.text = movie.movieName
+        nameLabel.text = movie.movieTitle
+        originalNameLabel.text = movie.movieOriginalTitle
         posterImage.sd_setImage(with: movie.moviePosterURL)
         dateLabel.text = movie.releaseDate
         descriptionLabel.text = movie.overview
         scoreLabel.text = movie.voteAverage
+        isAdultMovie.isHidden = !movie.isAdultMovie
     }
     
     func configUI() {
         posterImage.addShadow()
-//        gradientView.setGradientBackground(from: UIColor(named: "darkGreen")!, to: .clear)
+    }
+}
+
+// MARK: Gesture recognizer delegate
+extension DetailViewController {
+    func getMovieInfo(id: Int, completion: @escaping (MovieViewModel?) -> Void) {
+        AIMActivityIndicatorManager.sharedInstance.shouldShowIndicator()
+        Service.shared.getMovie(id: id, completion: { movie, error in
+            if error != nil {
+                completion(nil)
+                return
+            }
+            
+            guard let movie = movie else {
+                completion(nil)
+                return
+            }
+            
+            completion(MovieViewModel(with: movie))
+        })
     }
 }
 

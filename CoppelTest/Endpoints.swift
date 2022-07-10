@@ -20,11 +20,11 @@ enum Endpoint {
     case configuration
     case logout
     
-    func getURLString(parameters: [String: QueryParam] = [:], appendAPIKey:Bool) -> String {
+    func getURLString(id: Int? = nil, parameters: [String: QueryParam] = [:], appendAPIKey:Bool) -> String {
         var baseEndpoint: String = ""
         switch self {
         case .movieDetail:
-            baseEndpoint = "https://api.themoviedb.org/3/movie/top_rated"
+            baseEndpoint = "https://api.themoviedb.org/3/movie/\(id!)"
         case .popularMovies:
             baseEndpoint = "https://api.themoviedb.org/3/movie/top_rated"
         case .topRatedMovies:
@@ -56,11 +56,10 @@ enum Endpoint {
             baseEndpoint += "\(key)=\(value)&"
         }
         
-        if baseEndpoint.last == "&" {
+        if baseEndpoint.last == "&" || baseEndpoint.last == "?" {
             baseEndpoint =  String(baseEndpoint.dropLast())
         }
         
-        print("endpoint ", baseEndpoint)
         return baseEndpoint
     }
     

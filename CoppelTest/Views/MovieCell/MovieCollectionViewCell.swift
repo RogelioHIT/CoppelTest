@@ -28,7 +28,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     }
     
     func config(with movie: MovieViewModel) {
-        nameLabel.text = movie.movieName
+        nameLabel.text = movie.movieTitle
         posterImage.sd_setImage(with: movie.moviePosterURL)
         dateLabel.text = movie.releaseDate
         descriptionLabel.text = movie.overview

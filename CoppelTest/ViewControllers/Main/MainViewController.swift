@@ -182,7 +182,7 @@ class MainViewController: UIViewController {
     
     func showDetail(movie: MovieViewModel) {
         let detailView = DetailViewController()
-        detailView.movie = movie
+        detailView.movieId = movie.movieId
         detailView.modalPresentationStyle = .pageSheet
         detailView.modalTransitionStyle = .coverVertical
         self.present(detailView, animated: true)
@@ -247,6 +247,7 @@ extension MainViewController {
             self.collectionView.movies = movies ?? []
             DispatchQueue.main.async {
                 AIMActivityIndicatorManager.sharedInstance.forceHideIndicator()
+                self.collectionView.setContentOffset(CGPoint(x:0,y:0), animated: false)
                 self.collectionView.reloadData()
             }
         }

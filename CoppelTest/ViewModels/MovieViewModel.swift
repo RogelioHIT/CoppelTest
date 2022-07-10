@@ -13,7 +13,15 @@ struct MovieViewModel {
     
     var movie: Movie!
     
-    var movieName: String {
+    var movieId: Int {
+        return movie.id
+    }
+    
+    var movieTitle: String {
+        return movie.title.capitalized
+    }
+    
+    var movieOriginalTitle: String {
         return movie.original_title.capitalized
     }
     
@@ -32,6 +40,10 @@ struct MovieViewModel {
     
     var overview: String {
         return movie.overview.capitalized
+    }
+    
+    var isAdultMovie: Bool {
+        return movie.adult ?? false
     }
 
     init(with movie: Movie){

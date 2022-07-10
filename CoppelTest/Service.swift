@@ -15,6 +15,34 @@ class Service {
         serviceSession = URLSession.shared
     }
     
+    func getMovie(id: Int, completion: @escaping (Movie?, AppError?) -> Void) {
+        let endpointString = Endpoint.movieDetail.getURLString(id: id, appendAPIKey: true)
+        
+        guard let endpointURL = URL(string: endpointString) else {
+            completion(nil, .badRequest)
+            return }
+        
+        serviceSession.dataTask(with: endpointURL){ data, resp, error in
+            if error != nil {
+                completion(nil, .badRequest)
+                return
+            }
+            
+            guard let data = data else {
+                completion(nil, .noData)
+                return
+            }
+
+            do {
+                let response: Movie = try JSONDecoder().decode(Movie.self, from: data)
+                completion(response, nil)
+            } catch {
+                print(error.localizedDescription)
+                completion(nil, .decodingError)
+            }
+        }.resume()
+    }
+    
     func getMovieList(type: MovieListType, completion: @escaping (TMDBMoviesPage?, AppError?) -> Void) {
         let endpointString: String!
         switch type {
