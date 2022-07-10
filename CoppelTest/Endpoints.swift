@@ -9,6 +9,7 @@ import Foundation
 
 enum Endpoint {
     static let API_KEY: String = "5650d15b02b02e76cc7f3fe5863b98c4"
+    case movieDetail
     case popularMovies
     case topRatedMovies
     case upcomingMovies
@@ -18,43 +19,60 @@ enum Endpoint {
     case sessionId
     case configuration
     case logout
-
-    var urlString: String {
-        get {
-            switch self {
-            case .popularMovies:
-                return "https://api.themoviedb.org/3/movie/top_rated?api_key=\(Endpoint.API_KEY)"
-            case .topRatedMovies:
-                return "https://api.themoviedb.org/3/movie/popular?api_key=\(Endpoint.API_KEY)"
-            case .upcomingMovies:
-                return "https://api.themoviedb.org/3/movie/upcoming?api_key=\(Endpoint.API_KEY)"
-            case .nowPlayingMovies:
-                return "https://api.themoviedb.org/3/movie/now_playing?api_key=\(Endpoint.API_KEY)"
-            case .configuration:
-                return "https://api.themoviedb.org/3/configuration?api_key=\(Endpoint.API_KEY)"
-            case .authenticate:
-                return "https://www.themoviedb.org/authenticate/"
-            case .requestToken:
-                return "https://api.themoviedb.org/3/authentication/token/new?api_key=\(Endpoint.API_KEY)"
-            case .sessionId:
-                return "https://api.themoviedb.org/3/authentication/session/new?api_key=\(Endpoint.API_KEY)"
-            case .logout:
-                return "https://api.themoviedb.org/3/authentication/session?api_key=\(Endpoint.API_KEY)"
-            }
+    
+    func getURLString(parameters: [String: QueryParam] = [:], appendAPIKey:Bool) -> String {
+        var baseEndpoint: String = ""
+        switch self {
+        case .movieDetail:
+            baseEndpoint = "https://api.themoviedb.org/3/movie/top_rated"
+        case .popularMovies:
+            baseEndpoint = "https://api.themoviedb.org/3/movie/top_rated"
+        case .topRatedMovies:
+            baseEndpoint = "https://api.themoviedb.org/3/movie/popular"
+        case .upcomingMovies:
+            baseEndpoint = "https://api.themoviedb.org/3/movie/upcoming"
+        case .nowPlayingMovies:
+            baseEndpoint = "https://api.themoviedb.org/3/movie/now_playing"
+        case .configuration:
+            baseEndpoint = "https://api.themoviedb.org/3/configuration"
+        case .authenticate:
+            baseEndpoint = "https://www.themoviedb.org/authenticate/"
+        case .requestToken:
+            baseEndpoint = "https://api.themoviedb.org/3/authentication/token/new"
+        case .sessionId:
+            baseEndpoint = "https://api.themoviedb.org/3/authentication/session/new"
+        case .logout:
+            baseEndpoint = "https://api.themoviedb.org/3/authentication/session"
         }
+        
+        if appendAPIKey {
+            baseEndpoint += "?api_key=\(Endpoint.API_KEY)"
+        }else {
+            baseEndpoint += "?"
+        }
+        
+        parameters.keys.forEach { key in
+            let value = parameters[key]
+            baseEndpoint += "\(key)=\(value)&"
+        }
+        
+        if baseEndpoint.last == "&" {
+            baseEndpoint =  String(baseEndpoint.dropLast())
+        }
+        
+        print("endpoint ", baseEndpoint)
+        return baseEndpoint
     }
     
     var method: String? {
         get {
             switch self {
-            case .requestToken, .configuration:
-                return "GET"
             case .sessionId:
                 return "POST"
             case .logout:
                 return "DELETE"
             default:
-                return nil
+                return "GET"
             }
         }
     }

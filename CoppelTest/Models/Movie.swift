@@ -9,7 +9,6 @@ import Foundation
 
 struct Movie: Codable {
     let poster_path: String
-    let backdrop_path: String
     let id: Int
     let vote_average: Float
     let overview: String

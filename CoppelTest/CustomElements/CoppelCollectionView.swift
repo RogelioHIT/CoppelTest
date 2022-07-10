@@ -24,7 +24,6 @@ class CoppelCollectionView: UICollectionView {
         delegate = self
         
         configCollectionView()
-        fillWithDummyData()
     }
     
     required init?(coder: NSCoder) {
@@ -36,18 +35,6 @@ class CoppelCollectionView: UICollectionView {
         self.backgroundView = UIView(frame: CGRect.zero)
         let cellNib = UINib(nibName: "MovieCollectionViewCell", bundle: nil)
         self.register(cellNib, forCellWithReuseIdentifier: movieCellId)
-    }
-    
-    func fillWithDummyData() {
-        movies.append(MovieViewModel.getDummyModel())
-        movies.append(MovieViewModel.getDummyModel())
-        movies.append(MovieViewModel.getDummyModel())
-        movies.append(MovieViewModel.getDummyModel())
-        movies.append(MovieViewModel.getDummyModel())
-        movies.append(MovieViewModel.getDummyModel())
-        movies.append(MovieViewModel.getDummyModel())
-        movies.append(MovieViewModel.getDummyModel())
-        movies.append(MovieViewModel.getDummyModel())
     }
 }
 

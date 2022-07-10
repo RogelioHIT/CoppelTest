@@ -19,13 +19,13 @@ class Service {
         let endpointString: String!
         switch type {
         case .popular:
-            endpointString = Endpoint.popularMovies.urlString
+            endpointString = Endpoint.popularMovies.getURLString( appendAPIKey: true)
         case .topRated:
-            endpointString = Endpoint.topRatedMovies.urlString
+            endpointString = Endpoint.topRatedMovies.getURLString( appendAPIKey: true)
         case .upcoming:
-            endpointString = Endpoint.upcomingMovies.urlString
+            endpointString = Endpoint.upcomingMovies.getURLString( appendAPIKey: true)
         case .nowPlaying:
-            endpointString = Endpoint.nowPlayingMovies.urlString
+            endpointString = Endpoint.nowPlayingMovies.getURLString( appendAPIKey: true)
         }
         
         guard let endpointURL = URL(string: endpointString) else {
@@ -54,7 +54,7 @@ class Service {
     }
     
     func deleteSession(sessionId: String, completion: @escaping  (Bool) -> Void) {
-        guard let endpointURL = URL(string: Endpoint.logout.urlString) else {
+        guard let endpointURL = URL(string: Endpoint.logout.getURLString( appendAPIKey: true)) else {
             completion(false)
             return }
         
@@ -78,7 +78,7 @@ class Service {
     
     
     func configuration(completion: @escaping (TMDBConfiguration?, AppError?) -> Void) {
-        guard let endpointURL = URL(string: Endpoint.configuration.urlString) else {
+        guard let endpointURL = URL(string: Endpoint.configuration.getURLString( appendAPIKey: true)) else {
             completion(nil, .badRequest)
             return }
         
@@ -104,7 +104,7 @@ class Service {
     }
     
     func requestToken(username: String, password: String, completion: @escaping  (TMDBTokenResponse?, AppError?) -> Void) {
-        guard let endpointURL = URL(string: Endpoint.requestToken.urlString) else {
+        guard let endpointURL = URL(string: Endpoint.requestToken.getURLString( appendAPIKey: true)) else {
             completion(nil, .badRequest)
             return }
         serviceSession.dataTask(with: endpointURL){ data, resp, error in
@@ -128,7 +128,7 @@ class Service {
     }
     
     func getSessionId(token: String, completion: @escaping  (TMDBSessionResponse?, AppError?) -> Void) {
-        guard let endpointURL = URL(string: Endpoint.sessionId.urlString) else {
+        guard let endpointURL = URL(string: Endpoint.sessionId.getURLString( appendAPIKey: true)) else {
             completion(nil, .badRequest)
             return }
         

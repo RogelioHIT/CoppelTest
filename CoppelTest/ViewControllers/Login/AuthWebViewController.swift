@@ -31,7 +31,7 @@ class AuthWebViewController: UIViewController {
     }
     
     func setupURL() {
-        let myURL = URL(string: "\(Endpoint.authenticate.urlString + token)")
+        let myURL = URL(string: "\(Endpoint.authenticate.getURLString( appendAPIKey: false) + token)")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
