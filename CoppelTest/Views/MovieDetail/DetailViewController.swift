@@ -8,7 +8,6 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var modalView: UIView!
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -43,7 +42,7 @@ class DetailViewController: UIViewController {
     
     func configUI() {
         posterImage.addShadow()
-        gradientView.setGradientBackground(from: UIColor(named: "darkGreen")!, to: .clear)
+//        gradientView.setGradientBackground(from: UIColor(named: "darkGreen")!, to: .clear)
     }
 }
 
